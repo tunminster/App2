@@ -27,4 +27,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnTranslateHistory"
         android:enabled="false" />
+    <Button
+        android:text="Go Bound Service Page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGoBoundService" />
 </LinearLayout>

@@ -5,10 +5,23 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <TextView
-        android:text="Bound Service Demo"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    <Button
+        android:text="Get Timestamp button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtDisplay" />
+        android:id="@+id/btnGetTimestamp" />
+    <Button
+        android:text="Stop timestamp service button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStopTimestamp" />
+    <Button
+        android:text="Restart timestamp service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRestartTimestampService" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etMessageDisplay" />
 </LinearLayout>

@@ -23,6 +23,7 @@ namespace App2
             TextView translatedPhoneWord = FindViewById<TextView>(Resource.Id.tvTranslatedPhoneWord);
             Button translateButton = FindViewById<Button>(Resource.Id.btnTranslate);
             Button translationHistoryButton = FindViewById<Button>(Resource.Id.btnTranslateHistory);
+            Button goBoundServiceButton = FindViewById<Button>(Resource.Id.btnGoBoundService);
 
             // Add code to translate number
             translateButton.Click += (sender, e) =>
@@ -45,6 +46,12 @@ namespace App2
             {
                 var intent = new Intent(this, typeof(TranslationHistoryActivity));
                 intent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
+                StartActivity(intent);
+            };
+
+            goBoundServiceButton.Click += (sender, e) =>
+            {
+                var intent = new Intent(this, typeof(BoundServiceActivity));
                 StartActivity(intent);
             };
         }
