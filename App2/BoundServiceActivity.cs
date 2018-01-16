@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using App2.Services;
+using App2.Connections;
 
 namespace App2
 {

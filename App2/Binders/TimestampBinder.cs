@@ -9,8 +9,10 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using App2.Core;
+using App2.Services;
 
-namespace App2.Services
+namespace App2.Binders
 {
     public class TimestampBinder : Binder, IGetTimestamp
     {

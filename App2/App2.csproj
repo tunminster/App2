@@ -120,26 +120,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Binders\TimestampBinder.cs" />
     <Compile Include="BoundServiceActivity.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Connections\TimestampServiceConnection.cs" />
+    <Compile Include="Core\IGetTimestamp.cs" />
     <Compile Include="Core\PhoneTranslator.cs" />
+    <Compile Include="Core\UtcTimestamper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IGetTimestamp.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Services\TimestampBinder.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Services\DemoIntentService.cs" />
     <Compile Include="Services\TimestampService.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Services\TimestampServiceConnection.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Services\UtcTimestamper.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TranslationHistoryActivity.cs" />

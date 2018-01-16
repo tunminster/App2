@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace App2.Services
+namespace App2.Core
 {
     public class UtcTimestamper : IGetTimestamp
     {

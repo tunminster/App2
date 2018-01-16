@@ -9,9 +9,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using App2.Core;
+using App2.Binders;
 using Android.Util;
 
-namespace App2.Services
+namespace App2.Connections
 {
     public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection, IGetTimestamp
     {
@@ -29,7 +31,7 @@ namespace App2.Services
         public bool IsConnected { get; private set; }
         public TimestampBinder Binder { get; private set; }
 
-        
+
         public void OnServiceConnected(ComponentName name, IBinder service)
         {
             Binder = service as TimestampBinder;
@@ -38,7 +40,7 @@ namespace App2.Services
             string message = "OnServiceConnected - ";
             Log.Debug(TAG, $"OnServiceConnected {name.ClassName}");
 
-            if(IsConnected)
+            if (IsConnected)
             {
                 message = message + " bound to service " + name.ClassName;
                 boundServiceActivity.UpdateUiForBoundService();
@@ -63,13 +65,12 @@ namespace App2.Services
 
         public string GetFormattedTimestamp()
         {
-            if(!IsConnected)
+            if (!IsConnected)
             {
                 return null;
             }
 
             return Binder?.GetFormattedTimestamp();
         }
-
     }
 }

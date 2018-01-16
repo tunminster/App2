@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
 using Android.Content;
+using Core;
 
 namespace App2
 {
@@ -29,7 +30,7 @@ namespace App2
             translateButton.Click += (sender, e) =>
             {
                 // Translate user’s alphanumeric phone number to numeric
-                string translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
+                string translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
                 if (string.IsNullOrWhiteSpace(translatedNumber))
                 {
                     translatedPhoneWord.Text = string.Empty;
